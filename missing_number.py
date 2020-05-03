@@ -4,14 +4,13 @@ class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         
         #declare variables to be used
-        len_nums = 0
+        len_nums = len(nums)
         arr_xor_val = 0
         overall_xor_val = 0
 
         #for loop to find out the xor value of all elements in the given array, and max element
         for each_num in nums:
             arr_xor_val ^= each_num
-            len_nums+=1
         
         #for loop to find out the xor values from 0 till max_ele
         for j in range(1, len_nums+1):
